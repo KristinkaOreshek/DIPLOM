@@ -31,7 +31,7 @@ public class NegativeTestsForDebitForm {
     @BeforeEach
     void setup() {
         DatabaseHelper.clearDB();
-        open("http://localhost:8080");
+        open("http://localhost:8080/");
         MainPage mainPage = new MainPage();
         debitCardForm = mainPage.buyWithCard();
         debitCardForm.checkVisibleHeadingDebitCard();

@@ -1,7 +1,6 @@
-FROM node:latest
-RUN mkdir -p /usr/src/gate-simulator
-WORKDIR /usr/src/gate-simulator
-COPY package.json /usr/src/gate-simulator/
+FROM node:8.16.2-alpine
+WORKDIR /opt/app
+COPY . .
 RUN npm install
-COPY . /usr/src/gate-simulator
+CMD ["npm", "start"]
 EXPOSE 9999
